@@ -12,8 +12,11 @@ describe('Voting', () => {
 
   let context;
   let provider;
-  let votingProgram: Program<Votingdapp>;
+  let votingProgram: Program<Votingdapp>
   let owner: PublicKey;
+  
+    // anchor.setProvider(anchor.AnchorProvider.env());
+  // let votingProgram = anchor.workspace.Votingdapp as Program<Votingdapp>;
 
   beforeAll(async() => {
     context = await startAnchor("", [{name: "votingdapp", programId: votingAddress}], [])
